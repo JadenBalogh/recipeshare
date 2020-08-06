@@ -1,0 +1,12 @@
+<h1>Recipe Ingredients</h1>
+
+<strong>Current Ingredients:</strong>
+<ul>
+  <%= render @recipe.recipe_ingredients %>
+</ul>
+
+<strong>Add Ingredients:</strong>
+<%= render 'form' %>
+
+<br>
+<%= link_to 'Finish', recipe_path(@recipe) %>

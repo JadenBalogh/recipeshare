@@ -1,0 +1,26 @@
+<h1>View Recipe</h1>
+
+<p>
+  <strong>Recipe Name:</strong>
+  <%= @recipe.name %>
+</p>
+ 
+<p>
+  <strong>Description:</strong>
+  <%= @recipe.desc %>
+</p>
+
+<p>
+  <strong>Ingredients:</strong>
+  <ul>
+  <% @recipe.ingredients.each do |ingredient| %>
+    <li>
+      <%= ingredient.name %>
+      (<%= ingredient.recipe_ingredients.find_by(recipe_id: @recipe.id).amount %>
+      <%= ingredient.recipe_ingredients.find_by(recipe_id: @recipe.id).units %>)
+    </li>
+  <% end %>
+  </ul>
+</p>
+
+<%= link_to 'Back', recipes_path %>

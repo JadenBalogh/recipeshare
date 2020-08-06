@@ -1,0 +1,16 @@
+<%= form_with(model: [ @recipe, @recipe.recipe_ingredients.build ], local: true) do |form| %>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Units</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td><%= form.collection_select(:ingredient_id, Ingredient.all, :id, :name) %></td>
+      <td><%= form.number_field :amount %></td>
+      <td><%= form.text_field :units %></td>
+      <td><%= form.submit "Add" %></td>
+    </tr>
+  </table>
+<% end %>
