@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_001320) do
+ActiveRecord::Schema.define(version: 2020_08_09_224325) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(version: 2020_07_28_001320) do
     t.index ["name"], name: "index_ingredients_on_name", unique: true
   end
 
+  create_table "nutritional_informations", force: :cascade do |t|
+    t.integer "recipe_id", null: false
+    t.string "serving_size"
+    t.integer "calories"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["recipe_id"], name: "index_nutritional_informations_on_recipe_id"
+  end
+
   create_table "recipe_ingredients", force: :cascade do |t|
     t.integer "recipe_id", null: false
     t.integer "ingredient_id", null: false
@@ -54,6 +63,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_001320) do
   end
 
   add_foreign_key "comments", "articles"
+  add_foreign_key "nutritional_informations", "recipes"
   add_foreign_key "recipe_ingredients", "ingredients"
   add_foreign_key "recipe_ingredients", "recipes"
 end

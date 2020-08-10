@@ -2,4 +2,5 @@
   <%= Ingredient.find(recipe_ingredient.ingredient_id).name %>
   (<%= recipe_ingredient.amount %>
   <%= recipe_ingredient.units %>)
+  <%= link_to 'Delete', recipe_recipe_ingredient_path(@recipe, recipe_ingredient), method: :delete, data: { confirm: 'Are you sure?' } %>
 </li>

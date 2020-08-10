@@ -23,4 +23,14 @@
   </ul>
 </p>
 
+<h3>Nutritional Information:</h3>
+<p>
+  <strong>Serving Size:</strong>
+  <%= @recipe.nutritional_information.serving_size %>
+</p>
+<p>
+  <strong>Calories:</strong>
+  <%= @recipe.nutritional_information.calories %>
+</p>
+
 <%= link_to 'Back', recipes_path %>

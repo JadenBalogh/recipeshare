@@ -9,6 +9,7 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @recipe.build_nutritional_information
   end
   
   def edit
@@ -41,6 +42,11 @@ class RecipesController < ApplicationController
   
   private
     def recipe_params
-      params.require(:recipe).permit(:name, :desc)
+      params.require(:recipe).permit(
+        :name, :desc,
+        nutritional_information_attributes: [
+          :serving_size, :calories
+        ]
+      )
     end
 end

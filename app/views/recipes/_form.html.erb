@@ -23,6 +23,18 @@
     <%= form.label :desc %><br>
     <%= form.text_area :desc %>
   </p>
+  
+  <h3>Nutritional Information</h3>
+  <%= form.fields_for :nutritional_information, @recipe.nutritional_information do |ni_form| %>
+    <p>
+      <%= ni_form.label :serving_size %><br>
+      <%= ni_form.text_field :serving_size %>
+    </p>
+    <p>
+      <%= ni_form.label :calories %><br>
+      <%= ni_form.number_field :calories %>
+    </p>
+  <% end %>
  
   <p>
     <%= form.submit "Next" %>

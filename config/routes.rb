@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/search'
   get 'welcome/index'
   
   resources :articles do
