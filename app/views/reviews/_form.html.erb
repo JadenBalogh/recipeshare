@@ -1,0 +1,26 @@
+<%= form_with(model: [ @recipe, @recipe.reviews.build ], local: true) do |form| %>
+  <strong>Write a Review:</strong>
+  <p>
+    Rating:
+    <%= form.radio_button :rating, 1 %> 
+    <%= form.label :rating, '1', :value => 1 %>
+    <%= form.radio_button :rating, 2 %>
+    <%= form.label :rating, '2', :value => 2 %>
+    <%= form.radio_button :rating, 3 %>
+    <%= form.label :rating, '3', :value => 3 %>
+    <%= form.radio_button :rating, 4 %>
+    <%= form.label :rating, '4', :value => 4 %>
+    <%= form.radio_button :rating, 5 %>
+    <%= form.label :rating, '5', :value => 5 %>
+  </p>
+  <p>
+    Display Name: <%= form.text_field :reviewer %>
+  </p>
+  <p>
+    Review:<br>
+    <%= form.text_area :body %>
+  </p>
+  <p>
+    <%= form.submit 'Add Review' %>
+  </p>
+<% end %>

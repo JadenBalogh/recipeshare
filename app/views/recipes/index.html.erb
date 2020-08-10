@@ -1,11 +1,10 @@
-<h1>All Recipes</h1>
- 
+<h1>RecipeShare</h1>
+<strong>Your favourite source for recipes on the web!</strong>
+
+<hr>
+
+<br><strong><u>All Recipes:</u></strong>
 <table>
-  <tr>
-    <th>Recipe Name</th>
-    <th colspan="3"></th>
-  </tr>
- 
   <% @recipes.each do |recipe| %>
     <tr>
       <td><%= recipe.name %></td>

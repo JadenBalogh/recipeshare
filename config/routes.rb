@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   resources :recipes do
     resources :recipe_ingredients
+    resources :reviews
   end
   
   resources :ingredients do

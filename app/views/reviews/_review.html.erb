@@ -1,0 +1,7 @@
+<p>
+  <strong><%= review.reviewer %></strong> rated this recipe <strong><%= review.rating %>/5</strong><br>
+  |&emsp;<%= review.body %><br>
+  <%= link_to 'Delete', [review.recipe, review],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

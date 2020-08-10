@@ -23,14 +23,27 @@
   </ul>
 </p>
 
-<h3>Nutritional Information:</h3>
 <p>
-  <strong>Serving Size:</strong>
-  <%= @recipe.nutritional_information.serving_size %>
-</p>
-<p>
-  <strong>Calories:</strong>
-  <%= @recipe.nutritional_information.calories %>
+  <strong>Nutritional Information:</strong>
+  <ul>
+    <li>
+      <strong>Serving Size:</strong>
+      <%= @recipe.nutritional_information.serving_size %>
+    </li>
+    <li>
+      <strong>Calories:</strong>
+      <%= @recipe.nutritional_information.calories %>
+    </li>
+  </ul>
 </p>
 
 <%= link_to 'Back', recipes_path %>
+
+<hr>
+
+<h2>Reviews:</h2>
+<%= render @recipe.reviews %>
+
+<hr>
+
+<%= render 'reviews/form' %>
