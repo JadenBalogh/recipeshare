@@ -8,3 +8,5 @@ You can find the MVC-related source code under the following paths:
  - [Views](../master/app/views)
  - [Controllers](../master/app/controllers)
  - [DB Migrations](../master/db/migrate)
+
+RecipeShare was created by Jaden Balogh.
