@@ -8,5 +8,9 @@ You can find the MVC-related source code under the following paths:
  - [Views](../master/app/views)
  - [Controllers](../master/app/controllers)
  - [DB Migrations](../master/db/migrate)
-
+ 
+## Running Locally
+To run this project locally, [install the necessary Rails components](https://guides.rubyonrails.org/v5.0/getting_started.html#installing-rails) and run `rails server` on the command line in the project directory. This will allow you to access the site through [`localhost`](http://localhost:3000/) in your browser.
+ 
+## Contributors
 RecipeShare was created by Jaden Balogh.
